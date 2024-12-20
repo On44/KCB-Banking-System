@@ -1,0 +1,118 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #004d26; /* KCB Green */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-logo:hover {
+    transform: scale(1.1); /* Subtle logo scale effect on hover */
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    background-color: #003b1c; /* Darker green on hover */
+    color: #f1c40f; /* Light yellow color on hover */
+    border-radius: 5px;
+  }
+  
+  .navbar-auth {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-btn {
+    background-color: #f1c40f; /* A warm yellow */
+    color: #003b1c;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .navbar-btn:hover {
+    background-color: #f39c12; /* Darker yellow on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+  }
+  
+  .navbar-btn:active {
+    transform: translateY(0); /* Button clicks back to original position */
+  }
+  
+  /* Ensuring content doesn't get hidden behind the navbar */
+  body {
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+  }
+  
+  /* Responsive Design for Mobile */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      text-align: left;
+    }
+  
+    .navbar-link {
+      width: 100%;
+      padding: 12px 20px;
+      text-align: center;
+    }
+  
+    .navbar-btn {
+      width: 100%;
+      padding: 12px 20px;
+    }
+  }
+  
